@@ -1,0 +1,15 @@
+﻿<div class="row">
+    @if (ViewBag.message != null)
+    {
+        <div class="alert alert-success alert-dismissable fade in" style="margin-top: 20px; background-color: #1bbc9b; color: white">
+            <a href="#" class="close" data-dismiss="alert" style="color: white" aria-label="close">&times;</a>
+            @ViewBag.message
+        </div>
+    }
+    <div class="well col-md-6 col-lg-offset-3">
+        <h3> <a href="/home/addcandidate">Add Candidate</a> </h3>
+        <h3> <a href="/home/pending">View Pending</a> </h3>
+        <h3> <a href="/home/confirmed">View Confirmed</a> </h3>
+        <h3> <a href="/home/refused">View Refused</a> </h3>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+﻿@using _180523_Assignment.Data
+@model Candidate
+
+<div class="well col-md-6 col-lg-offset-3">
+
+    <h4>Name: <span style="color:blue">@Model.FirstName @Model.LastName</span> </h4>
+    <h4>Email: <span style="color:blue">@Model.Email</span></h4>
+    <h4>Phone: <span style="color:blue">@Model.PhoneNumber</span></h4>
+    <h4>Status: <span style="color:blue">@Model.Status</span></h4>
+    <h4>Notes: <span style="color:blue">@Model.Notes</span></h4>
+    @if (Model.Status == Status.Pending)
+    {
+        <br />
+        <button class="btn btn-info" id="confirm" data-candidate-id=@Model.Id>Confirm</button>
+        <button class="btn btn-danger" id="refuse" data-candidate-id=@Model.Id>Refuse</button>
+    }
+
+</div>
+
+
+@section scripts
+{
+    <script src="~/Scripts/ViewDetails.js"></script>
+}

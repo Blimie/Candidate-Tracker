@@ -1,0 +1,24 @@
+﻿@using _180523_Assignment.Data
+@model IEnumerable<Candidate>
+
+<table class="table table-bordered table-striped" style="margin-top: 60px">
+    <tr>
+        <th></th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Phone Number</th>
+        <th>Email</th>          
+    </tr>
+    @foreach (Candidate c in Model)
+        {
+            <tr>
+                <td>
+                    <a class="btn btn-primary" href="/home/viewdetails?id=@c.Id">View Details</a>
+                </td>
+                <td>@c.FirstName</td>
+                <td>@c.LastName</td>
+                <td>@c.PhoneNumber</td>
+                <td>@c.Email</td>                 
+            </tr>
+        }
+</table>

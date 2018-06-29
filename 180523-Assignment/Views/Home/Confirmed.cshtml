@@ -1,0 +1,30 @@
+﻿@using _180523_Assignment.Data
+@model IEnumerable<Candidate>
+
+<br />
+<button class="btn btn-success" id="toggle">Toggle Notes</button>
+<br /> <br />
+<table class="table table-bordered table-striped table-hover" >
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+        <th class="note">Notes</th>
+    </tr>
+    @foreach (Candidate c in Model)
+    {
+        <tr>
+            <td>@c.FirstName</td>
+            <td>@c.LastName</td>
+            <td>@c.PhoneNumber</td>
+            <td>@c.Email</td>
+            <td class="note">@c.Notes</td>
+        </tr>
+    }
+</table>
+
+@section scripts
+{
+    <script src="~/Scripts/Notes.js"></script>
+}
